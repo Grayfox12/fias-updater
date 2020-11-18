@@ -1,0 +1,26 @@
+{
+  "pg": {
+    "host":"localhost",
+    "user": "postgres",
+    "port": 5432,
+    "name": "fias_testing_upload",
+    "passwd": "postgres"
+  },
+  "indexes": {
+    "suggest": "idx_fias_sugg",
+    "addrobj": "idx_fias_addrobj",
+    "houses": "idx_fias_houses"
+  },
+  "sphinx": {
+    "host": "127.0.0.1:3306",
+    "vardir": "./temp/var2"
+  },
+  "logger": {
+    "errorLog": "",
+    "warnLog": "",
+    "infoLog": "",
+    "debugLog": "",
+    "format": "yyyy-mm-dd HH:MM",
+    "level": "info"
+  }
+}

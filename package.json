@@ -1,0 +1,42 @@
+{
+  "name": "fias-updater",
+  "version": "1.0.0",
+  "description": "Создание базы данных для фиаса",
+  "main": "index.js",
+  "scripts": {
+    "build:pkg": "pkg --out-path .\\dist  ."
+  },
+  "pkg": {
+    "targets": [
+      "node12-linux-x64",
+      "node12-win-x64",
+      "node12-win-x86"
+    ],
+    "scripts": [
+      "./workers/pg-writer.js",
+      "./workers/readfile.js"
+    ],
+    "assets": [
+      "node_modules/node-expat/build/Release/node_expat.node",
+      "node_modules/iconv/build/Release/iconv.node"
+    ]
+  },
+  "bin": "index.js",
+  "author": "grayfox12",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^6.2.0",
+    "pg": "^8.5.0",
+    "pg-copy-streams": "^5.1.1",
+    "pino": "^6.7.0",
+    "pino-pretty": "^4.3.0",
+    "rxjs": "^6.6.3",
+    "xml-stream": "^0.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.7",
+    "gulp": "^4.0.2",
+    "gulp-run": "^1.7.1",
+    "pg-native": "^3.0.0"
+  }
+}
